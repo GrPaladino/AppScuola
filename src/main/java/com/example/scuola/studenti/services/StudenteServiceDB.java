@@ -1,7 +1,7 @@
 package com.example.scuola.studenti.services;
 
-import com.example.scuola.models.Studente;
-import com.example.scuola.StudenteRepository;
+import com.example.scuola.studenti.entity.Studente;
+import com.example.scuola.studenti.repository.StudenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

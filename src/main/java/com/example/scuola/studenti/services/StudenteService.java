@@ -1,6 +1,6 @@
 package com.example.scuola.studenti.services;
 
-import com.example.scuola.models.Studente;
+import com.example.scuola.studenti.entity.Studente;
 
 import java.util.List;
 

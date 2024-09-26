@@ -1,8 +1,7 @@
 package com.example.scuola.studenti.controllers;
 
-import com.example.scuola.models.Studente;
+import com.example.scuola.studenti.entity.Studente;
 import com.example.scuola.studenti.services.StudenteServiceDB;
-import com.example.scuola.studenti.services.StudenteServiceMock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
