@@ -1,7 +1,7 @@
-package com.example.scuola.studenti.controllers;
+package com.example.scuola.controllers;
 
-import com.example.scuola.studenti.entity.Studente;
-import com.example.scuola.studenti.services.StudenteServiceDB;
+import com.example.scuola.entity.Studente;
+import com.example.scuola.services.StudenteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +11,7 @@ import java.util.List;
 public class StudenteController {
 
     @Autowired
-    private StudenteServiceDB studenteService;
+    private StudenteService studenteService;
 
     @GetMapping("/studenti")
     public List<Studente> getStudenti() {
