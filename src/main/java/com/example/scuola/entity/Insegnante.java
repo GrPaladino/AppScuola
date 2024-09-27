@@ -5,8 +5,10 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 
+import java.util.Set;
+
 @Entity
-@Table(name = "insegnenti")
+@Table(name = "insegnanti")
 @ToString
 @Getter
 @Setter
@@ -31,4 +33,14 @@ public class Insegnante {
 
     @Column(name="email", unique = true, nullable = false)
     private String email;
+
+//    manyToMany con tabella Classi
+    @ManyToMany
+    @JoinTable(
+            name = "classe_insegnante",
+            joinColumns = @JoinColumn(name = "insegnante_id"),
+            inverseJoinColumns = @JoinColumn(name = "classe_id")
+    )
+
+    private Set<Classe> classi;
 }

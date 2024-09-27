@@ -18,22 +18,22 @@ public class StudenteController {
         return studenteService.getStudenti();
     }
 
-    @GetMapping("/studente/{id}")
+    @GetMapping("/studenti/{id}")
     public Studente getStudente(@PathVariable Integer id) {
         return studenteService.getStudente(id);
     }
 
-    @PostMapping("/studente")
+    @PostMapping("/studenti")
     public void addStudente(@RequestBody Studente studente) {
         studenteService.addStudente(studente);
     }
 
-    @PutMapping("/studente/{id}")
+    @PutMapping("/studenti/{id}")
     public void updateStudente(@PathVariable Integer id, @RequestBody Studente studente) {
         studenteService.updateStudente(id, studente);
     }
 
-    @DeleteMapping("/studente/{id}")
+    @DeleteMapping("/studenti/{id}")
     public void deleteStudente(@PathVariable Integer id) {
         studenteService.deleteStudente(id);
     }

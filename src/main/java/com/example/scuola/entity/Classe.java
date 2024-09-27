@@ -3,6 +3,9 @@ package com.example.scuola.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.Set;
+
 @Entity
 @Table(name = "classi")
 @ToString
@@ -26,7 +29,13 @@ public class Classe {
     @Column(name = "tot_alunni")
     private Integer totAlunni;
 
-//    @OneToMany(mappedBy = "studente")
-//    private ArrayList<Studente> studenti = new ArrayList<>();
+
+//    oneToMany con studenti
+    @OneToMany(mappedBy = "classe")
+    private Set<Studente> studenti;
+
+//    manyToMany con insegnanti
+    @ManyToMany(mappedBy = "classi")
+    private Set<Insegnante> insegnanti;
 
 }

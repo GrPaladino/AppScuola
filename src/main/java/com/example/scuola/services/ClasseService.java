@@ -2,10 +2,12 @@ package com.example.scuola.services;
 import com.example.scuola.entity.Classe;
 import com.example.scuola.repository.ClasseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class ClasseService {
     @Autowired
     private ClasseRepository classeRepository;

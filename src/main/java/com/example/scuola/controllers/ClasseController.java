@@ -1,7 +1,7 @@
 package com.example.scuola.controllers;
 
-import com.example.scuola.entity.Classe;
 import com.example.scuola.services.ClasseService;
+import com.example.scuola.entity.Classe;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,18 +16,18 @@ public class ClasseController {
     @GetMapping("/classi")
     public List<Classe> getClassi() {return classeService.getClassi();}
 
-    @GetMapping("/classe/{id}")
+    @GetMapping("/classi/{id}")
     public Classe getClasse(@PathVariable Integer id) {return classeService.getClasse(id);}
 
-    @PostMapping("/classe")
+    @PostMapping("/classi")
     public void addClasse(@RequestBody Classe classe) {classeService.addClasse(classe);}
 
-    @PutMapping("/classe/{id}")
+    @PutMapping("/classi/{id}")
     public void updateClasse(@PathVariable Integer id, @RequestBody Classe classe) {
         classeService.updateClasse(id, classe);
     }
 
-    @DeleteMapping("/classe/{id}")
+    @DeleteMapping("/classi/{id}")
     public void deleteClasse(@PathVariable Integer id) {classeService.deleteClasse(id);}
 }
 

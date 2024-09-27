@@ -20,14 +20,14 @@ public class InsegnanteController {
     @GetMapping("/insegnanti/{id}")
     public Insegnante getInsegnante(@PathVariable Integer id) {return insegnanteService.getInsegnante(id);}
 
-    @PostMapping("/insegnante")
+    @PostMapping("/insegnanti")
     public void addInsegnante(@RequestBody Insegnante insegnante) {insegnanteService.addInsegnante(insegnante);}
 
-    @PutMapping("/insegnante/{id}")
+    @PutMapping("/insegnanti/{id}")
     public void updateInsegnante(@PathVariable Integer id, @RequestBody Insegnante insegnante) {
         insegnanteService.updateInsegnante(id, insegnante);
     }
 
-    @DeleteMapping("/insegnante/{id}")
+    @DeleteMapping("/insegnanti/{id}")
     public void deleteInsegnante(@PathVariable Integer id) {insegnanteService.deleteInsegnante(id);}
 }

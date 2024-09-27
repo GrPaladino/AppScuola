@@ -26,11 +26,13 @@ public class Studente {
     @Column(name="genere")
     private String genere;
 
-    @Column(name="email", unique = true, nullable = false)
+    @Column(name="email",length = 100, unique = true, nullable = false)
     private String email;
 
-//    @ManyToOne
-//    @JoinColumn(name = "idClassi")
-//    private Classe classe;
+
+    @ManyToOne
+    @JoinColumn(name = "classeId")
+    private Classe classe;
+
 
 }
